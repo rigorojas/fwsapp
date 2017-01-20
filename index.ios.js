@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, Image} from 'react-native';
 import {Router, Scene, Actions, DefaultRenderer, Reducer} from 'react-native-router-flux';
 import {Side} from './src/SharedComponents/SideMenu/Side.js';
 import Blank from "./src/Scenes/Blank/Blank.js";
@@ -12,8 +12,20 @@ const reducerCreate = params => {
     }
 };
 
+const AppLogo = () => {
+    return (
+        <View style={{ alignItems: 'center', marginTop: 26 }}>
+            <Image
+                source={require('./appLogo.png')}
+                style={{ width: 238, height: 25 }}
+	    />
+        </View>
+    );
+};
+
 class fwsapp extends React.Component {
     state = {};
+
     render() {
         return (
             <Router
@@ -26,13 +38,14 @@ class fwsapp extends React.Component {
                     open={false}
                 >
                     <Scene
+                        title="Home"
                         key="root"
                     >
                         <Scene
                             key="Blank"
                             component={Blank}
-                            title="Blank"
-                            hideNavBar={true}
+                            renderTitle={() => { return <AppLogo />; }}
+                            hideNavBar={false}
                             initial={true}
                         />
                         <Scene
@@ -40,6 +53,12 @@ class fwsapp extends React.Component {
                             component={Temperature}
                             title="Temperature"
                             hideNavBar={false}
+                            rightButtonIconStyle={{
+                                width: 20,
+                                height: 20,
+                            }}
+                            rightButtonImage={require('./gear.png')}
+                            onRight={() => {alert('right button'); }}
                         />
                     </Scene>
                 </Scene>
