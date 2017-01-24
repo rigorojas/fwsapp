@@ -17,7 +17,11 @@ const AppLogo = () => {
         <View style={{ alignItems: 'center', marginTop: 26 }}>
             <Image
                 source={require('./appLogo.png')}
-                style={{ width: 238, height: 25 }}
+                style={{
+                    width: 238,
+                    height: 25,
+                    marginBottom: 150
+                }}
 	    />
         </View>
     );
@@ -25,26 +29,15 @@ const AppLogo = () => {
 
 class fwsapp extends React.Component {
     state = {};
-
     render() {
         return (
-            <Router
-                createReducer={reducerCreate}
-                sceneStyle={{backgroundColor:'#99F799'}}
-            >
-                <Scene
-                    key="Drawer"
-                    component={Side}
-                    open={false}
-                >
-                    <Scene
-                        title="Home"
-                        key="root"
-                    >
+            <Router createReducer={reducerCreate}>
+                <Scene key="Drawer" component={Side} open={false}>
+                    <Scene title="Home" key="root">
                         <Scene
                             key="Blank"
                             component={Blank}
-                            renderTitle={() => { return <AppLogo />; }}
+                            renderTitle={() => {return <AppLogo />;}}
                             hideNavBar={false}
                             initial={true}
                         />
