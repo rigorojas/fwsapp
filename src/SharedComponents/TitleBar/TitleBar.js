@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableHighlight
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 
 export default class TitleBar extends React.Component {
     static propTypes = {
@@ -36,9 +31,10 @@ export default class TitleBar extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
-        paddingTop: 28,
+        paddingTop: 128,
         backgroundColor: "#666",
         flexWrap: "nowrap",
+        marginBottom: 5
     },
     navigation: {
         flexGrow: 1,
