@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     StyleSheet,
     Text,
@@ -6,13 +6,12 @@ import {
     TouchableHighlight
 } from 'react-native';
 
-export default class TitleBar extends Component {
+export default class TitleBar extends React.Component {
     static propTypes = {
        openDrawerMenu: React.PropTypes.func.isRequired,
     };
 
     onButtonPress = () => {
-
     }
 
     render() {

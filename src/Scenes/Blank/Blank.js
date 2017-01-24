@@ -1,10 +1,10 @@
-import React, { Component } from 'React';
-import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import React from 'React';
+import {StyleSheet, View} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import styles from "./styles";
 import Button from 'react-native-button';
 
-export default class Blank extends Component {
+export default class Blank extends React.Component {
     render() {
       return (
         <View style={{margin: 128}}>
