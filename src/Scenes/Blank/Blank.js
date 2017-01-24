@@ -7,7 +7,9 @@ import Button from 'react-native-button';
 export default class Blank extends React.Component {
     render() {
       return (
-        <View style={{margin: 128}}>
+        <View
+            style={styles.container}
+        >
             <Button
                 onPress={() => {
                     Actions.refresh({
@@ -18,7 +20,7 @@ export default class Blank extends React.Component {
                 containerStyle={styles.buttonContainer}
                 style={styles.button}
             >
-                Go To Drawer 1
+                Go To Drawer
             </Button>
             <Button
                 onPress={() => Actions.Temperature()}
