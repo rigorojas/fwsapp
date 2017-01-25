@@ -14,13 +14,13 @@ export class Side extends React.Component {
                 open={state.open}
                 onOpen={() => Actions.refresh(
                     {
-                        key:state.key,
+                        key: state.key,
                         open: true
                     }
                 )}
                 onClose={() => Actions.refresh(
                     {
-                        key:state.key,
+                        key: state.key,
                         open: false
                     }
                 )}
