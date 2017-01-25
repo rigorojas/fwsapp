@@ -1,14 +1,16 @@
 import React from 'React';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Image} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import styles from "./styles";
 import Button from 'react-native-button';
+const backgroundImage = require('../../Themes/default/images/bg_main.png');
 
 export default class Blank extends React.Component {
     render() {
       return (
-        <View
+        <Image
             style={styles.container}
+            source={backgroundImage}
         >
             <Button
                 onPress={() => {
@@ -29,7 +31,7 @@ export default class Blank extends React.Component {
             >
                 Temperature Page
             </Button>
-        </View>
+        </Image>
       )
     }
 };

@@ -7,11 +7,11 @@ export class Menu extends React.Component {
         return (
             <Image
                 style={styles.container}
-                source={require('../../Themes/default/images/sideMenuLeft.png')}
+                source={require('../../Themes/default/images/bg_sideMenuLeft.png')}
             >
                 <ScrollView style={styles.scrollView}>
                     <Text style={styles.controlText}>
-                        Please Select a Project
+                        Welcome
                     </Text>
                     <TouchableOpacity
                         onPress={() => {
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
       flex: 1,
       width: null,
       height: null,
-      resizeMode: 'stretch'
+      resizeMode: 'cover'
   },
   scrollView: {
       flex: 1,
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   },
   controlText: {
     color: 'white',
+    textAlign: 'center'
   },
   button: {
     backgroundColor: 'white',
