@@ -2,6 +2,7 @@ import React from 'react';
 import {AppRegistry, StyleSheet, Text, View, Image} from 'react-native';
 import {Router, Scene, Actions, DefaultRenderer, Reducer} from 'react-native-router-flux';
 import {Side} from './src/SharedComponents/SideMenu/Side.js';
+import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
 import Blank from "./src/Scenes/Blank/Blank.js";
 import Temperature from "./src/Scenes/Temperature/Temperature.js";
 
@@ -10,21 +11,6 @@ const reducerCreate = params => {
     return (state, action)=>{
         return defaultReducer(state, action);
     }
-};
-
-const AppLogo = () => {
-    return (
-        <View style={{ alignItems: 'center', marginTop: 26 }}>
-            <Image
-                source={require('./appLogo.png')}
-                style={{
-                    width: 238,
-                    height: 25,
-                    marginBottom: 150
-                }}
-	    />
-        </View>
-    );
 };
 
 class fwsapp extends React.Component {
@@ -37,7 +23,7 @@ class fwsapp extends React.Component {
                         <Scene
                             key="Blank"
                             component={Blank}
-                            renderTitle={() => {return <AppLogo />;}}
+                            renderTitle={() => {return <NavBarImage />;}}
                             hideNavBar={false}
                             initial={true}
                         />
