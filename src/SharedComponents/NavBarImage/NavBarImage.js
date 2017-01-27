@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
+import styles from "./styles";
 const appLogo = require('./../../Themes/default/images/appLogo.png');
 
 export class NavBarImage extends React.Component {
@@ -14,16 +15,3 @@ export class NavBarImage extends React.Component {
         );
     };
 };
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        paddingTop: 26,
-        backgroundColor: '#cccccc'
-    },
-    navBarImage: {
-        width: 238,
-        height: 25,
-        marginBottom: 150
-    }
-});
