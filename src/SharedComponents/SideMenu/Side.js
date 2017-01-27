@@ -25,9 +25,7 @@ export class Side extends React.Component {
                     }
                 )}
                 type="displace"
-                content={<Menu
-                    closeDrawer={() => {this.onClose}}
-                />}
+                content={<Menu closeDrawer={() => {this.onClose}} />}
                 tapToClose={true}
                 openDrawerOffset={0.2}
                 panCloseMask={0.2}
