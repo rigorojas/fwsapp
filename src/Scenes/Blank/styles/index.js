@@ -14,14 +14,14 @@ const styles = StyleSheet.create({
         height: 45,
         overflow: 'hidden',
         borderRadius: 4,
-        backgroundColor: '#337',
+        backgroundColor: '#aaa',
         marginBottom: 5,
         marginLeft: 20,
         marginRight: 20,
     },
     button: {
         fontSize: 14,
-        color: '#ccc'
+        color: '#eee'
     },
 });
 
