@@ -36,7 +36,7 @@ class fwsapp extends React.Component {
                                 width: 20,
                                 height: 20,
                             }}
-                            rightButtonImage={require('./gear.png')}
+                            rightButtonImage={require('./src/Themes/default/images/gear.png')}
                             onRight={() => {alert('right button'); }}
                         />
                     </Scene>
