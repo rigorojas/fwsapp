@@ -18,7 +18,10 @@ class fwsapp extends React.Component {
     render() {
         return (
             <Router createReducer={reducerCreate}>
-                <Scene key="Drawer" component={Side} open={false}>
+                <Scene key="Drawer"
+                    component={Side}
+                    open={false}
+                >
                     <Scene title="Home" key="root">
                         <Scene
                             key="Blank"
