@@ -1,7 +1,8 @@
 import React from 'React';
 import {StyleSheet, Image, View, Text} from 'react-native';
-import {TabNavigator} from "react-navigation";
 import Button from 'react-native-button';
+import {TabNavigator} from "react-navigation";
+import Notification from "./Notification.js";
 const backgroundImage = require('../../Themes/default/images/bg_main.png');
 
 const styles = StyleSheet.create({
@@ -28,16 +29,6 @@ const styles = StyleSheet.create({
         color: '#fff'
     },
 });
-
-class NotificationsScreen extends React.Component{
-    render() {
-        return (
-            <View>
-                <Text>This is the Notification Scene</Text>
-            </View>
-        );
-    }
-}
 
 class HomeScreen extends React.Component {
     render() {
@@ -73,7 +64,7 @@ class HomeScreen extends React.Component {
 const Home = TabNavigator(
     {
         Home: {screen: HomeScreen},
-        Notifications: {screen: NotificationsScreen}
+        Notifications: {screen: Notification}
     },
     {
         tabBarOptions: {activeTintColor: '#e91e63'}
