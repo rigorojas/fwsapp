@@ -36,16 +36,12 @@ export default class Profile extends React.Component {
             source={backgroundImage}
         >
             <Button
-                onPress={() => {
-                    Actions.refresh({
-                        key: 'Drawer',
-                        open: value => !value
-                    })
-                }}
+                onPress={() => this.props.navigation.navigate('DrawerOpen')}
+                label="Open Drawer"
                 containerStyle={styles.buttonContainer}
                 style={styles.button}
             >
-                Go To Drawer
+                Open Drawer
             </Button>
             <Button
                 onPress={() => Actions.Temperature()}
