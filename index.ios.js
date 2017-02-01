@@ -3,7 +3,7 @@ import {AppRegistry, StyleSheet, Button, Text, View, Image} from 'react-native';
 import {TabNavigator, DrawerNavigator} from "react-navigation";
 import {Side} from './src/SharedComponents/SideMenu/Side.js';
 import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
-import Home from "./src/Scenes/Home/Home.js";
+import Home from "./src/Scenes/Home/Index.js";
 import Temperature from "./src/Scenes/Temperature/Temperature.js";
 
 const RightButtonImage = require('./src/Themes/default/images/gear.png');
