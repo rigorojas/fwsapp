@@ -1,6 +1,6 @@
 import React from 'React';
-import {StyleSheet, Image} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import {StyleSheet, Image, View, Text} from 'react-native';
+import {TabNavigator} from "react-navigation";
 import Button from 'react-native-button';
 const backgroundImage = require('../../Themes/default/images/bg_main.png');
 
@@ -29,7 +29,17 @@ const styles = StyleSheet.create({
     },
 });
 
-export default class Blank extends React.Component {
+class NotificationsScreen extends React.Component{
+    render() {
+        return (
+            <View>
+                <Text>This is the Notification Scene</Text>
+            </View>
+        );
+    }
+}
+
+class HomeScreen extends React.Component {
     render() {
       return (
         <Image
@@ -59,3 +69,15 @@ export default class Blank extends React.Component {
       )
     }
 };
+
+const Home = TabNavigator(
+    {
+        Home: {screen: HomeScreen},
+        Notifications: {screen: NotificationsScreen}
+    },
+    {
+        tabBarOptions: {activeTintColor: '#e91e63'}
+    }
+);
+
+export default Home;
