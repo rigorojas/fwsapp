@@ -5,14 +5,22 @@ import Notification from "./Notification.js";
 import Profile from "./Profile.js";
 import About from "./About.js";
 
-const Home = TabNavigator(
+const navigationOptions = {
+  title: 'Great',
+};
+
+const HomeTabNavigator = TabNavigator(
     {
-        Home: {screen: Profile},
+        Profile: {screen: Profile},
         Notification: {screen: Notification},
         About: {screen: About},
     },
     {
+        title: 'Profile',
         animationEnabled: true,
+        header: {
+            visible: true
+        },
         initialTab: About,
         swipeEnabled: true,
         tabBarOptions: {
@@ -22,8 +30,14 @@ const Home = TabNavigator(
                 backgroundColor: "#900"
             },
         },
-        tabBarPosition: 'top'
+        tabBarPosition: 'bottom'
     },
 );
 
-export default Home;
+export default class Home extends React.Component {
+    render(){
+        return(
+            <HomeTabNavigator />
+        );
+    }
+};

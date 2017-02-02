@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Button, Text, View, Image} from 'react-native';
-import {TabNavigator, DrawerNavigator} from "react-navigation";
+import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
 import {Menu} from './src/SharedComponents/SideMenu/Menu.js';
 import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
 import Home from "./src/Scenes/Home/Index.js";
@@ -10,40 +10,67 @@ const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
 class TestScreen extends React.Component {
     static navigationOptions = {
-        drawer: () => ({label: 'Home'}),
-        title: 'Great'
+        title: 'test 1',
+        drawer: () => ({label: 'Test'}),
     }
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={{flex:1, backgroundColor: "#9999cc"}}>
                 <Button
                     title="Home"
-                    onPress={() => this.props.navigation.navigate('Notifications')}
+                    onPress={() => navigate('Home')}
                     label="Home"
                 />
                 <Button
+                    title="Temperature"
+                    onPress={() => navigate('Temperature')}
+                    label="Temperature"
+                />
+                <Button
                     title="Open Drawer!"
-                    onPress={() => this.props.navigation.navigate('DrawerOpen')}
+                    onPress={() => navigate('DrawerOpen')}
                     label="OpenDrawer"
                     style={{backgroundColor: "#ff3"}}
                 />
+                <Button
+                    title="Alert"
+                    onPress={() => {alert("Told you.");}} />
             </View>
         );
     }
 }
 
-class HomeScreen extends React.Component {
-    render(){
-        return(
-            <Home />
-        );
-    }
+const Routes = {
+    Test:{
+        name: 'Test',
+        description: 'Just A Test Screen',
+        screen: TestScreen,
+    },
+    Home: {
+        name: 'Home',
+        description: 'Home Tabs',
+        screen: Home,
+    },
+    Temperature: {
+        name: 'Temperature',
+        description: 'Remote Images',
+        screen: Temperature,
+     },
 }
+
+const RootNavigator = StackNavigator(
+    {
+        ...Routes
+    },{
+        initialRouteName: 'Test',
+        headerMode: 'float',
+    },
+);
 
 const fwsapp = DrawerNavigator(
     {
-        Test: {screen: TestScreen},
-        Notifications: {screen: HomeScreen}
+        AppNavigator: {screen: RootNavigator},
     },
     {
         contentComponent: Menu
