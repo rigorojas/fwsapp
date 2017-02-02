@@ -5,9 +5,8 @@ const backgroundImage = require('../../Themes/default/images/bg_main.png');
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 60,
-        paddingTop: 20,
         flex: 1,
+        paddingTop: 20,
         width: null,
         height: null,
         resizeMode: "stretch"
@@ -30,27 +29,35 @@ const styles = StyleSheet.create({
 
 export default class Profile extends React.Component {
     render() {
-      return (
-        <Image
-            style={styles.container}
-            source={backgroundImage}
-        >
-            <Button
-                onPress={() => this.props.navigation.navigate('DrawerOpen')}
-                label="Open Drawer"
-                containerStyle={styles.buttonContainer}
-                style={styles.button}
+        return (
+            <Image
+                style={styles.container}
+                source={backgroundImage}
             >
-                Open Drawer
-            </Button>
-            <Button
-                onPress={() => Actions.Temperature()}
-                containerStyle={styles.buttonContainer}
-                style={styles.button}
-            >
-                Temperature Page
-            </Button>
-        </Image>
-      )
+                <Button
+                    onPress={() => this.props.navigation.navigate('DrawerOpen')}
+                    label="Open Drawer"
+                    containerStyle={styles.buttonContainer}
+                    style={styles.button}
+                >
+                    Open Drawer
+                </Button>
+                <Button
+                    onPress={() => this.props.navigation.goBack()}
+                    label="Open Drawer"
+                    containerStyle={styles.buttonContainer}
+                    style={styles.button}
+                >
+                    Go Back
+                </Button>
+                <Button
+                    onPress={() => Actions.Temperature()}
+                    containerStyle={styles.buttonContainer}
+                    style={styles.button}
+                >
+                    Temperature Page
+                </Button>
+            </Image>
+        )
     }
 };

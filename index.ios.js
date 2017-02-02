@@ -13,10 +13,9 @@ class TestScreen extends React.Component {
         drawer: () => ({label: 'Home'}),
         title: 'Great'
     }
-
     render() {
         return (
-            <View style={{backgroundColor: "pink"}}>
+            <View style={{flex:1, backgroundColor: "#9999cc"}}>
                 <Button
                     title="Home"
                     onPress={() => this.props.navigation.navigate('Notifications')}
@@ -33,10 +32,18 @@ class TestScreen extends React.Component {
     }
 }
 
+class HomeScreen extends React.Component {
+    render(){
+        return(
+            <Home />
+        );
+    }
+}
+
 const fwsapp = DrawerNavigator(
     {
         Test: {screen: TestScreen},
-        Notifications: {screen: Home}
+        Notifications: {screen: HomeScreen}
     },
     {
         contentComponent: Menu

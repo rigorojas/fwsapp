@@ -12,12 +12,17 @@ const Home = TabNavigator(
         About: {screen: About},
     },
     {
+        animationEnabled: true,
+        initialTab: About,
+        swipeEnabled: true,
         tabBarOptions: {
-            activeTintColor: '#e90000',
+            activeTintColor: '#fff',
+            activeBackgroundColor: '#666',
             style: {
-                backgroundColor: "red"
-            }
-        }
+                backgroundColor: "#900"
+            },
+        },
+        tabBarPosition: 'top'
     },
 );
 
