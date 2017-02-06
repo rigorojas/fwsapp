@@ -6,7 +6,7 @@ import Profile from "./Profile.js";
 import About from "./About.js";
 
 const navigationOptions = {
-  title: 'Great',
+  title: 'Home Index',
 };
 
 const HomeTabNavigator = TabNavigator(
@@ -16,12 +16,13 @@ const HomeTabNavigator = TabNavigator(
         About: {screen: About},
     },
     {
-        title: 'Profile',
+        title: 'Home Index',
         animationEnabled: true,
         header: {
+            title: "Home Index",
             visible: true
         },
-        initialTab: About,
+        initialTab: {screen: About},
         swipeEnabled: true,
         tabBarOptions: {
             activeTintColor: '#fff',
