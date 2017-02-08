@@ -3,6 +3,26 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import MapView from 'react-native-maps';
 import Api from "../../Components/OpenWeatherMap/Api";
 
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'stretch',
+        backgroundColor: '#F5FCFF',
+    },
+    map: {
+        flex: 2,
+        marginTop: 30,
+    },
+    textWrapper: {
+        flex: 1,
+        alignItems: 'center',
+    },
+    text: {
+        fontSize: 30,
+    }
+});
+
 export default class Temperature extends Component {
 //     state = {
 //         pin: {
@@ -45,12 +65,16 @@ export default class Temperature extends Component {
 //             this.setState(data);
 //         });
 //     };
+    static navigationOptions = {
+      title: 'Remote Images',
+    };
+
     render(){
         return (
             <View>
                 <Image
                     style={{width: 300, height: 300}}
-                    source={{uri: 'https://s-media-cache-ak0.pinimg.com/564x/d2/5e/89/d25e89e3a5bdaff978644ed0ff7ba8fa.jpg'}}
+                    source={{uri: 'https://s-media-cache-ak0.pinimg.com/564x/be/49/a1/be49a191673133be45616b24ccd23403.jpg'}}
                 />
                 <Image
                     style={{width: 300, height: 300}}
@@ -64,23 +88,3 @@ export default class Temperature extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'stretch',
-        backgroundColor: '#F5FCFF',
-    },
-    map: {
-        flex: 2,
-        marginTop: 30,
-    },
-    textWrapper: {
-        flex: 1,
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 30,
-    }
-});

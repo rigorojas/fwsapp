@@ -5,10 +5,6 @@ import Notification from "./Notification.js";
 import Profile from "./Profile.js";
 import About from "./About.js";
 
-const navigationOptions = {
-  title: 'Home Index',
-};
-
 const HomeTabNavigator = TabNavigator(
     {
         Profile: {screen: Profile},
@@ -36,6 +32,10 @@ const HomeTabNavigator = TabNavigator(
 );
 
 export default class Home extends React.Component {
+    static navigationOptions = {
+      title: 'Home Index',
+    };
+
     render(){
         return(
             <HomeTabNavigator />
