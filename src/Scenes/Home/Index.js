@@ -33,7 +33,7 @@ const HomeTabNavigator = TabNavigator(
 
 export default class Home extends React.Component {
     static navigationOptions = {
-      title: 'Home Index',
+        title: 'Home Index',
     };
 
     render(){

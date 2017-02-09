@@ -4,7 +4,7 @@ import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
 import {Menu} from './src/SharedComponents/Drawer/Menu.js';
 import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
 import Home from "./src/Scenes/Home/Index.js";
-import Temperature from "./src/Scenes/Temperature/Temperature.js";
+import RemoteImages from "./src/Scenes/RemoteImages/RemoteImages.js";
 
 const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
@@ -23,9 +23,9 @@ class TestScreen extends React.Component {
                     label="Home"
                 />
                 <Button
-                    title="Temperature"
-                    onPress={() => navigate('Temperature')}
-                    label="Temperature"
+                    title="RemoteImages"
+                    onPress={() => navigate('RemoteImages')}
+                    label="RemoteImages"
                 />
                 <Button
                     title="Open Drawer!"
@@ -52,10 +52,10 @@ const Routes = {
         description: 'Home Tabs',
         screen: Home,
     },
-    Temperature: {
-        name: 'Temperature',
+    RemoteImages: {
+        name: 'RemoteImages',
         description: 'Remote Images',
-        screen: Temperature,
+        screen: RemoteImages,
      },
 }
 
