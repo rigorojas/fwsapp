@@ -36,27 +36,19 @@ export default class Profile extends React.Component {
             >
                 <Button
                     onPress={() => this.props.navigation.navigate('DrawerOpen')}
-                    label="Open Drawer"
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
-                >
-                    Open Drawer
-                </Button>
+                >Open Drawer</Button>
                 <Button
                     onPress={() => this.props.navigation.goBack()}
-                    label="Open Drawer"
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
-                >
-                    Go Back
-                </Button>
+                >Go Back</Button>
                 <Button
                     onPress={() => Actions.Temperature()}
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
-                >
-                    Temperature Page
-                </Button>
+                >Remote Images</Button>
             </Image>
         )
     }
