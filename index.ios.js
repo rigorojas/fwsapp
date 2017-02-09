@@ -41,36 +41,33 @@ class TestScreen extends React.Component {
     }
 }
 
-const Routes = {
-    Test:{
-        name: 'Test',
-        description: 'Just A Test Screen',
-        screen: TestScreen,
-    },
-    Home: {
-        name: 'Home',
-        description: 'Home Tabs',
-        screen: Home,
-    },
-    RemoteImages: {
-        name: 'RemoteImages',
-        description: 'Remote Images',
-        screen: RemoteImages,
-     },
-}
-
-const RootNavigator = StackNavigator(
-    {
-        ...Routes
-    },{
-        initialRouteName: 'Test',
-        headerMode: 'float',
-    },
-);
-
 const fwsapp = DrawerNavigator(
     {
-        AppNavigator: {screen: RootNavigator},
+        AppNavigator: {
+            screen: StackNavigator(
+                {
+                    Test:{
+                        name: 'Test',
+                        description: 'Just A Test Screen',
+                        screen: TestScreen,
+                    },
+                    Home: {
+                        name: 'Home',
+                        description: 'Home Tabs',
+                        screen: Home,
+                    },
+                    RemoteImages: {
+                        name: 'RemoteImages',
+                        description: 'Remote Images',
+                        screen: RemoteImages,
+                     },
+                },
+                {
+                    initialRouteName: 'Test',
+                    headerMode: 'float',
+                },
+            )
+        },
     },
     {
         contentComponent: Menu
@@ -78,4 +75,3 @@ const fwsapp = DrawerNavigator(
 );
 
 AppRegistry.registerComponent('fwsapp', () => fwsapp);
-//watchman watch-del-all && rm -rf node_modules && npm install && npm start -- --reset-cache
