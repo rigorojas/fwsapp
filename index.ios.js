@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Button, Text, View, Image} from 'react-native';
 import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
-import {Menu} from './src/SharedComponents/SideMenu/Menu.js';
+import {Menu} from './src/SharedComponents/Drawer/Menu.js';
 import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
 import Home from "./src/Scenes/Home/Index.js";
 import Temperature from "./src/Scenes/Temperature/Temperature.js";
@@ -10,7 +10,7 @@ const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
 class TestScreen extends React.Component {
     static navigationOptions = {
-        title: 'test 1',
+        title: 'Test 1',
         drawer: () => ({label: 'Test'}),
     }
     render() {
