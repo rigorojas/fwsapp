@@ -41,17 +41,13 @@ export class Menu extends React.Component {
                         label="RemoteImages"
                         containerStyle={styles.buttonContainer}
                         style={styles.button}
-                    >
-                        Remote Images
-                    </Button>
+                    >Remote Images</Button>
                     <Button
                         onPress={() => this.props.navigation.navigate('DrawerOpen')}
                         label="Open Drawer"
                         containerStyle={styles.buttonContainer}
                         style={styles.button}
-                    >
-                        Open Drawer
-                    </Button>
+                    >Open Drawer</Button>
                 </ScrollView>
             </Image>
         );
