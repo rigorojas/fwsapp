@@ -9,9 +9,17 @@ import RemoteImages from "./src/Scenes/RemoteImages/RemoteImages.js";
 const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
 class TestScreen extends React.Component {
+    static tintColor = "red";
     static navigationOptions = {
-        title: 'Test 1',
-        drawer: () => ({label: 'Test'}),
+        title: 'Test 2',
+        drawer: () => (
+            {
+                label: 'Test',
+                icon: ({ tintColor }) => (
+                    <Image source={RightButtonImage} />
+                ),
+            }
+        ),
     }
     render() {
         const {navigate} = this.props.navigation;
@@ -37,6 +45,14 @@ class TestScreen extends React.Component {
                     title="Alert"
                     onPress={() => {alert("Told you.");}} />
             </View>
+        );
+    }
+}
+
+class MenuScreen extends React.Component {
+    render(){
+        return(
+            <Menu theTitle="My New Title Prop" />
         );
     }
 }
@@ -70,7 +86,11 @@ const fwsapp = DrawerNavigator(
         },
     },
     {
-        contentComponent: Menu
+        contentComponent: MenuScreen,
+        drawerWidth: 300,
+        style: {
+            padding: 20,
+        },
     }
 );
 
