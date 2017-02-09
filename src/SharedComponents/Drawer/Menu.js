@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import Button from 'react-native-button';
 
 const styles = StyleSheet.create({
   container: {
@@ -33,35 +33,24 @@ export class Menu extends React.Component {
                 source={require('../../Themes/default/images/bg_sideMenuLeft.png')}
             >
                 <ScrollView style={styles.scrollView}>
-                    <Text style={styles.controlText}>
-                        Welcome
-                    </Text>
-                    <TouchableOpacity
-                        onPress={() => {
-                            setTimeout(
-                                () => Actions.Temperature(),
-                                0
-                            );
-                            Actions.refresh({
-                                key: 'Drawer',
-                                open: false
-                            });
-                        }}
+                    <Text style={styles.controlText}>this.props.theTitle</Text>
+                    <Button
+                        onPress={() => navigate('RemoteImages')}
+                        title="RemoteImages"
+                        label="RemoteImages"
+                        containerStyle={styles.buttonContainer}
                         style={styles.button}
                     >
-                        <Text>Remote Images</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => {
-                            Actions.refresh({
-                                key: 'Drawer',
-                                open: false
-                            })
-                        }}
+                        Remote Images
+                    </Button>
+                    <Button
+                        onPress={() => this.props.navigation.navigate('DrawerOpen')}
+                        label="Open Drawer"
+                        containerStyle={styles.buttonContainer}
                         style={styles.button}
                     >
-                        <Text>Close Drawer</Text>
-                    </TouchableOpacity>
+                        Open Drawer
+                    </Button>
                 </ScrollView>
             </Image>
         );
