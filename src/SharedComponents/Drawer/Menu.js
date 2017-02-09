@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 import Button from 'react-native-button';
+const backgroundImage = require('../../Themes/default/images/bg_sideMenuLeft.png');
 
 const styles = StyleSheet.create({
   container: {
@@ -30,7 +31,7 @@ export class Menu extends React.Component {
         return (
             <Image
                 style={styles.container}
-                source={require('../../Themes/default/images/bg_sideMenuLeft.png')}
+                source={backgroundImage}
             >
                 <ScrollView style={styles.scrollView}>
                     <Text style={styles.controlText}>this.props.theTitle</Text>

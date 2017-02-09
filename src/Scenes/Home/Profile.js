@@ -29,23 +29,24 @@ const styles = StyleSheet.create({
 
 export default class Profile extends React.Component {
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <Image
                 style={styles.container}
                 source={backgroundImage}
             >
                 <Button
-                    onPress={() => this.props.navigation.navigate('DrawerOpen')}
+                    onPress={() => navigate('remoteimages')}
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
                 >Open Drawer</Button>
                 <Button
-                    onPress={() => this.props.navigation.goBack()}
+                    onPress={() => navigate.goBack()}
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
                 >Go Back</Button>
                 <Button
-                    onPress={() => Actions.Temperature()}
+                    onPress={() => navigate.goBack()}
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
                 >Remote Images</Button>

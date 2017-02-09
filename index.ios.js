@@ -22,7 +22,6 @@ class TestScreen extends React.Component {
         ),
     }
     render() {
-        const {navigate} = this.props.navigation;
         return (
             <View style={{flex:1, backgroundColor: "#9999cc"}}>
                 <Button
@@ -76,6 +75,7 @@ const fwsapp = DrawerNavigator(
                         name: 'RemoteImages',
                         description: 'Remote Images',
                         screen: RemoteImages,
+                        path: 'remoteimages'
                      },
                 },
                 {
