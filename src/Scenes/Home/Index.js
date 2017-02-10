@@ -1,6 +1,5 @@
 import React from 'React';
 import {StyleSheet, Button, Image, View, Text} from 'react-native';
-// import Button from 'react-native-button';
 import {TabNavigator} from "react-navigation";
 import Notification from "./Notification.js";
 import Profile from "./Profile.js";
@@ -40,7 +39,6 @@ export default class Home extends React.Component {
             right: <Button title="Info" onPress={()=> alert('right button')} />,
         },
     };
-
     render(){
         return(<HomeTabNavigator />);
     }
