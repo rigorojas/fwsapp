@@ -88,9 +88,7 @@ const fwsapp = DrawerNavigator(
     {
         contentComponent: MenuScreen,
         drawerWidth: 300,
-        style: {
-            padding: 20,
-        },
+        style: {},
     }
 );
 
