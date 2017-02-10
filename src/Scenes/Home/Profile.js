@@ -29,19 +29,24 @@ const styles = StyleSheet.create({
 
 export default class Profile extends React.Component {
     render() {
-        const {navigate} = this.props.navigation;
+        const {navigation} = this.props;
         return (
             <Image
                 style={styles.container}
                 source={backgroundImage}
             >
                 <Button
-                    onPress={() => navigate('remoteimages')}
+                    onPress={() => navigation.avigate('about')}
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
-                >Open Drawer</Button>
+                >Home</Button>
                 <Button
-                    onPress={() => navigate.goBack()}
+                    onPress={() => navigate('about')}
+                    containerStyle={styles.buttonContainer}
+                    style={styles.button}
+                >Goto to About Tab</Button>
+                <Button
+                    onPress={() => navigation.goBack()}
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
                 >Go Back</Button>
@@ -50,6 +55,13 @@ export default class Profile extends React.Component {
                     containerStyle={styles.buttonContainer}
                     style={styles.button}
                 >Remote Images</Button>
+
+                <Button
+                    onPress={() => console.log(this.props.navigation)}
+                    containerStyle={styles.buttonContainer}
+                    style={styles.button}
+                >Router Name</Button>
+
             </Image>
         )
     }
