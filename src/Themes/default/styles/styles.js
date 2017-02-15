@@ -1,11 +1,11 @@
 import React from 'React';
 import {StyleSheet} from 'react-native';
 
-export const Backgrounds = {
+const backgrounds = {
     main: require('../images/bg_main.png')
 }
 
-export const ThemeStyles = StyleSheet.create({
+const styles = StyleSheet.create({
     sceneContainer: {
         flex: 1,
         paddingTop: 20,
@@ -28,3 +28,10 @@ export const ThemeStyles = StyleSheet.create({
         color: '#fff'
     }
 });
+
+const Theme = {
+    backgrounds,
+    styles
+};
+
+export default Theme;

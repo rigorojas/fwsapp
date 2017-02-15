@@ -5,9 +5,8 @@ import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
 import {Menu} from './src/SharedComponents/Drawer/Menu.js';
 import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
 import Home from "./src/Scenes/Home/Index.js";
-import {Backgrounds, ThemeStyles} from "./src/Themes/default/styles/styles.js";
+import Theme from "./src/Themes/default/styles/styles.js";
 import RemoteImages from "./src/Scenes/RemoteImages/RemoteImages.js";
-
 
 const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
@@ -28,28 +27,28 @@ class TestScreen extends React.Component {
         const {navigate} = this.props.navigation;
         return (
             <Image
-                source={Backgrounds.main}
-                style={ThemeStyles.sceneContainer}
+                source={Theme.backgrounds.main}
+                style={Theme.styles.sceneContainer}
             >
                 <Button
                     onPress={() => navigate('Home')}
-                    containerStyle={ThemeStyles.buttonContainer}
-                    style={ThemeStyles.button}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
                 >Home</Button>
                 <Button
                     onPress={() => navigate('RemoteImages')}
-                    containerStyle={ThemeStyles.buttonContainer}
-                    style={ThemeStyles.button}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
                 >Remove Images</Button>
                 <Button
                     onPress={() => navigate('DrawerOpen')}
-                    containerStyle={ThemeStyles.buttonContainer}
-                    style={ThemeStyles.button}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
                 >Open Drawer</Button>
                 <Button
                     onPress={() => {alert("Told you.");}}
-                    containerStyle={ThemeStyles.buttonContainer}
-                    style={ThemeStyles.button}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
                 >Alert</Button>
             </Image>
         );
