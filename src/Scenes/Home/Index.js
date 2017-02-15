@@ -18,7 +18,10 @@ const Options = {
         title: "Home Index",
         visible: true
     },
-    initialTab: {screen: About},
+    initialTab: {
+        screen: About,
+        path: 'profile/:user'
+    },
     swipeEnabled: true,
     tabBarOptions: {
         activeTintColor: '#fff',

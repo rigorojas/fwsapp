@@ -1,17 +1,20 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Button, Text, View, Image} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, Image} from 'react-native';
+import Button from 'react-native-button';
 import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
 import {Menu} from './src/SharedComponents/Drawer/Menu.js';
 import {NavBarImage} from './src/SharedComponents/NavBarImage/NavBarImage.js';
 import Home from "./src/Scenes/Home/Index.js";
+import {Backgrounds, ThemeStyles} from "./src/Themes/default/styles/styles.js";
 import RemoteImages from "./src/Scenes/RemoteImages/RemoteImages.js";
+
 
 const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
 class TestScreen extends React.Component {
     static tintColor = "red";
     static navigationOptions = {
-        title: 'Test 2',
+        title: 'Welcome',
         drawer: () => (
             {
                 label: 'Test',
@@ -24,27 +27,31 @@ class TestScreen extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
         return (
-            <View style={{flex:1, backgroundColor: "#9999cc"}}>
+            <Image
+                source={Backgrounds.main}
+                style={ThemeStyles.sceneContainer}
+            >
                 <Button
-                    title="Home"
                     onPress={() => navigate('Home')}
-                    label="Home"
-                />
+                    containerStyle={ThemeStyles.buttonContainer}
+                    style={ThemeStyles.button}
+                >Home</Button>
                 <Button
-                    title="RemoteImages"
                     onPress={() => navigate('RemoteImages')}
-                    label="RemoteImages"
-                />
+                    containerStyle={ThemeStyles.buttonContainer}
+                    style={ThemeStyles.button}
+                >Remove Images</Button>
                 <Button
-                    title="Open Drawer!"
                     onPress={() => navigate('DrawerOpen')}
-                    label="OpenDrawer"
-                    style={{backgroundColor: "#ff3"}}
-                />
+                    containerStyle={ThemeStyles.buttonContainer}
+                    style={ThemeStyles.button}
+                >Open Drawer</Button>
                 <Button
-                    title="Alert"
-                    onPress={() => {alert("Told you.");}} />
-            </View>
+                    onPress={() => {alert("Told you.");}}
+                    containerStyle={ThemeStyles.buttonContainer}
+                    style={ThemeStyles.button}
+                >Alert</Button>
+            </Image>
         );
     }
 }
