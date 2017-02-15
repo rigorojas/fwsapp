@@ -1,9 +1,7 @@
 import React from 'React';
-import {StyleSheet, Image} from 'react-native';
+import {Image} from 'react-native';
 import Button from 'react-native-button';
 import Theme from '../../Themes/default/styles/styles.js';
-
-const styles = StyleSheet.create({});
 
 export default class Profile extends React.Component {
     render() {
