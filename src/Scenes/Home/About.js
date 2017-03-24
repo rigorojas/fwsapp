@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     text: {
         color: "#fff"
     }
-})
+});
 
 export default class About extends React.Component{
     static navigationOptions = {

@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, Image} from 'react-native';
+import { NavigationActions } from 'react-navigation'
 import Button from 'react-native-button';
 import Theme from '../../Themes/default/styles/styles.js'
 
@@ -11,6 +12,19 @@ const styles = StyleSheet.create({
 });
 
 export default class Menu extends React.Component {
+    static tintColor = "red";
+    static navigationOptions = {
+        title: 'Welcome',
+        drawer: () => (
+            {
+                label: 'Test',
+                icon: ({ tintColor }) => (
+                    <Image source={RightButtonImage} />
+                ),
+            }
+        ),
+    }
+
     render() {
         return (
             <Image
@@ -26,11 +40,11 @@ export default class Menu extends React.Component {
                         style={Theme.styles.button}
                     >Remote Images</Button>
                     <Button
-                        onPress={() => this.props.navigation.navigate('DrawerOpen')}
-                        label="Open Drawer"
+                        onPress={() => navigate('DrawerClose')}
+                        label="Close Drawer"
                         containerStyle={Theme.styles.buttonContainer}
                         style={Theme.styles.button}
-                    >Open Drawer</Button>
+                    >Close Drawer</Button>
                 </ScrollView>
             </Image>
         );

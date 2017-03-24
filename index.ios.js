@@ -33,12 +33,12 @@ class TestScreen extends React.Component {
                     onPress={() => navigate('Home')}
                     containerStyle={Theme.styles.buttonContainer}
                     style={Theme.styles.button}
-                >Home</Button>
+                >User</Button>
                 <Button
                     onPress={() => navigate('RemoteImages')}
                     containerStyle={Theme.styles.buttonContainer}
                     style={Theme.styles.button}
-                >Remove Images</Button>
+                >Remote Images</Button>
                 <Button
                     onPress={() => navigate('DrawerOpen')}
                     containerStyle={Theme.styles.buttonContainer}

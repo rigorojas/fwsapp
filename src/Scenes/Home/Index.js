@@ -19,7 +19,7 @@ const Options = {
         visible: true
     },
     initialTab: {
-        screen: About,
+        screen: Profile,
         path: 'profile/:user'
     },
     swipeEnabled: true,
@@ -33,16 +33,16 @@ const Options = {
     tabBarPosition: 'bottom'
 }
 
-const HomeTabNavigator = TabNavigator(Screens, Options);
+const UserTabNavigator = TabNavigator(Screens, Options);
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        title: 'Home Index',
+        title: 'User Index',
         header: {
             right: <Button title="Info" onPress={()=> alert('right button')} />,
         },
     };
     render(){
-        return(<HomeTabNavigator />);
+        return(<UserTabNavigator />);
     }
 };
