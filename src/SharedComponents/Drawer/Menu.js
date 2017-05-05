@@ -33,6 +33,13 @@ export default class Menu extends React.Component {
             >
                 <ScrollView style={styles.scrollView}>
                     <Button
+                        onPress={() => navigate('User')}
+                        title="User"
+                        label="User"
+                        containerStyle={Theme.styles.buttonContainer}
+                        style={Theme.styles.button}
+                    >User</Button>
+                    <Button
                         onPress={() => navigate('RemoteImages')}
                         title="RemoteImages"
                         label="RemoteImages"
