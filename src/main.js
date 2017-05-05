@@ -3,10 +3,10 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import Button from 'react-native-button';
 import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
 import Menu from './SharedComponents/Drawer/Menu.js';
-import User from "./Scenes/User/Index.js";
-import Welcome from "./Scenes/Welcome/Index.js";
+import User from "./Screens/User/Index.js";
+import Welcome from "./Screens/Welcome/Index.js";
 import Theme from "./Themes/default/styles/styles.js";
-import RemoteImages from "./Scenes/RemoteImages/RemoteImages.js";
+import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
 
 const RightButtonImage = require('./Themes/default/images/gear.png');
 
