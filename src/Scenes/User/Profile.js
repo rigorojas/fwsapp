@@ -1,29 +1,35 @@
 import React from 'React';
 import {StyleSheet, View, Text} from 'react-native';
+import { NavigationActions } from 'react-navigation'
+
+const backAction = NavigationActions.back({
+  key: 'Profile'
+});
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#009"
+        backgroundColor: "#099"
     },
     text: {
         color: "#fff"
     }
 });
 
-export default class About extends React.Component{
+export default class Profile extends React.Component {
     static navigationOptions = {
-        title: 'About title',
+        title: 'Profile title',
         tabBar: {
-            label: 'About',
+            label: 'Profile',
         },
      }
 
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>This is the Stand alone About Scene</Text>
+                <Text style={styles.text}>This is the Home > Profile Scene</Text>
             </View>
         );
     }
-}
+
+};

@@ -15,7 +15,7 @@ export default class Notification extends React.Component{
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>This is the Stand alone Notification Scene</Text>
+                <Text style={styles.text}>This is the Home > Notification Scene</Text>
             </View>
         );
     }

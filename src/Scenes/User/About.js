@@ -4,27 +4,26 @@ import {StyleSheet, View, Text} from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#099"
+        backgroundColor: "#009"
     },
     text: {
         color: "#fff"
     }
 });
 
-export default class Profile extends React.Component {
+export default class About extends React.Component{
     static navigationOptions = {
-        title: 'Profile title',
+        title: 'About title',
         tabBar: {
-            label: 'Profile',
+            label: 'About',
         },
      }
 
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>This is the Stand alone Profile Scene</Text>
+                <Text style={styles.text}>This is the Home > About Scene</Text>
             </View>
         );
     }
-
-};
+}

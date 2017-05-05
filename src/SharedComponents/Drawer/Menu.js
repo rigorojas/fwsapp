@@ -12,20 +12,19 @@ const styles = StyleSheet.create({
 });
 
 export default class Menu extends React.Component {
-    static tintColor = "red";
-    static navigationOptions = {
-        title: 'Welcome',
-        drawer: () => (
-            {
-                label: 'Test',
-                icon: ({ tintColor }) => (
-                    <Image source={RightButtonImage} />
-                ),
-            }
-        ),
-    }
-
     render() {
+        const tintColor = "red";
+        const navigationOptions = {
+            title: 'Welcome',
+            drawer: () => (
+                {
+                    label: 'DrawerMenu',
+                    icon: ({ tintColor }) => (
+                        <Image source={RightButtonImage} />
+                    ),
+                }
+            ),
+        }
         return (
             <Image
                 source={Theme.backgrounds.main}

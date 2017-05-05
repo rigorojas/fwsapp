@@ -3,61 +3,20 @@ import {AppRegistry, StyleSheet, Text, View, Image} from 'react-native';
 import Button from 'react-native-button';
 import {StackNavigator, TabNavigator, DrawerNavigator} from "react-navigation";
 import Menu from './src/SharedComponents/Drawer/Menu.js';
-import Home from "./src/Scenes/Home/Index.js";
+import User from "./src/Scenes/User/Index.js";
+import Welcome from "./src/Scenes/Welcome/Index.js";
 import Theme from "./src/Themes/default/styles/styles.js";
 import RemoteImages from "./src/Scenes/RemoteImages/RemoteImages.js";
 
 const RightButtonImage = require('./src/Themes/default/images/gear.png');
 
-class TestScreen extends React.Component {
-    static tintColor = "red";
-    static navigationOptions = {
-        title: 'Welcome',
-        drawer: () => (
-            {
-                label: 'Test',
-                icon: ({ tintColor }) => (
-                    <Image source={RightButtonImage} />
-                ),
-            }
-        ),
-    }
-    render() {
-        const {navigate} = this.props.navigation;
-        return (
-            <Image
-                source={Theme.backgrounds.main}
-                style={Theme.styles.sceneContainer}
-            >
-                <Button
-                    onPress={() => navigate('Home')}
-                    containerStyle={Theme.styles.buttonContainer}
-                    style={Theme.styles.button}
-                >User</Button>
-                <Button
-                    onPress={() => navigate('RemoteImages')}
-                    containerStyle={Theme.styles.buttonContainer}
-                    style={Theme.styles.button}
-                >Remote Images</Button>
-                <Button
-                    onPress={() => navigate('DrawerOpen')}
-                    containerStyle={Theme.styles.buttonContainer}
-                    style={Theme.styles.button}
-                >Open Drawer</Button>
-                <Button
-                    onPress={() => {alert("Told you.");}}
-                    containerStyle={Theme.styles.buttonContainer}
-                    style={Theme.styles.button}
-                >Alert</Button>
-            </Image>
-        );
-    }
-}
-
-class MenuScreen extends React.Component {
+class DrawerMenuScreen extends React.Component {
     render(){
         return(
-            <Menu theTitle="My New Title Prop" />
+            <Menu
+                theTitle="My New Title Prop"
+                {...this.props}
+            />
         );
     }
 }
@@ -67,15 +26,15 @@ const fwsapp = DrawerNavigator(
         AppNavigator: {
             screen: StackNavigator(
                 {
-                    Test:{
+                    Welcome:{
                         name: 'Test',
-                        description: 'Just A Test Screen',
-                        screen: TestScreen,
+                        description: 'Just The Welcome Screen',
+                        screen: Welcome,
                     },
-                    Home: {
-                        name: 'Home',
-                        description: 'Home Tabs',
-                        screen: Home,
+                    User: {
+                        name: 'User',
+                        description: 'User Tabs',
+                        screen: User,
                     },
                     RemoteImages: {
                         name: 'RemoteImages',
@@ -84,14 +43,14 @@ const fwsapp = DrawerNavigator(
                      },
                 },
                 {
-                    initialRouteName: 'Test',
+                    initialRouteName: 'Welcome',
                     headerMode: 'float',
                 },
             )
         },
     },
     {
-        contentComponent: MenuScreen,
+        contentComponent: DrawerMenuScreen,
         drawerWidth: 300,
         style: {},
     }
