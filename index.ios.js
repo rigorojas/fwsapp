@@ -27,7 +27,7 @@ const fwsapp = DrawerNavigator(
             screen: StackNavigator(
                 {
                     Welcome:{
-                        name: 'Test',
+                        name: 'Welcome',
                         description: 'Just The Welcome Screen',
                         screen: Welcome,
                     },

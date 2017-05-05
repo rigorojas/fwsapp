@@ -12,10 +12,11 @@ const styles = StyleSheet.create({
 });
 
 export default class Menu extends React.Component {
-    render() {
+    render(){
+        const {navigate} = this.props.navigation;
         const tintColor = "red";
         const navigationOptions = {
-            title: 'Welcome',
+            title: 'DrawerMenu',
             drawer: () => (
                 {
                     label: 'DrawerMenu',
