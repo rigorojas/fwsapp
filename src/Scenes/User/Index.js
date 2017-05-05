@@ -12,10 +12,10 @@ const Screens = {
 }
 
 const Options = {
-    title: 'Home Index',
+    title: 'User Index',
     animationEnabled: true,
     header: {
-        title: "Home Index",
+        title: "User Index",
         visible: true
     },
     initialTab: {
