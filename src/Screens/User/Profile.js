@@ -18,10 +18,8 @@ const styles = StyleSheet.create({
 
 export default class Profile extends React.Component {
     static navigationOptions = {
-        title: 'Profile title',
-        tabBar: {
-            label: 'Profile',
-        },
+        title: 'Profile',
+        tabBarlabel: 'Profile',
      }
 
     render() {

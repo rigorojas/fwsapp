@@ -14,9 +14,7 @@ const styles = StyleSheet.create({
 export default class About extends React.Component{
     static navigationOptions = {
         title: 'About title',
-        tabBar: {
-            label: 'About',
-        },
+        tabBarLabel: 'About',
      }
 
     render() {

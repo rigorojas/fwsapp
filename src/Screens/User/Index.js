@@ -1,5 +1,5 @@
 import React from 'React';
-import {StyleSheet, Button, Image, View, Text} from 'react-native';
+import {Button, Text} from 'react-native';
 import {TabNavigator} from "react-navigation";
 import Notification from "./Notification.js";
 import Profile from "./Profile.js";
@@ -14,6 +14,7 @@ const Screens = {
 const Options = {
     title: 'User Index',
     animationEnabled: true,
+    tabBarLabel: 'User Index',
     header: {
         title: "User Index",
         visible: true
@@ -37,10 +38,8 @@ const UserTabNavigator = TabNavigator(Screens, Options);
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        title: 'User Index',
-        header: {
-            right: <Button title="Info" onPress={()=> alert('right button')} />,
-        },
+        headerTitle: "User Index",
+        headerRight: <Button title="Info" onPress={()=> alert('right button')} />,
     };
     render(){
         return(<UserTabNavigator />);
