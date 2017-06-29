@@ -4,6 +4,7 @@ import Menu from './SharedComponents/Drawer/Menu.js';
 import User from "./Screens/User/Index.js";
 import Welcome from "./Screens/Welcome/Index.js";
 import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
+import ApiConnections from "./Screens/ApiConnections/Index.js";
 
 class DrawerMenuScreen extends React.Component {
     render(){
@@ -35,7 +36,12 @@ const Main = DrawerNavigator(
                         name: 'RemoteImages',
                         description: 'Remote Images',
                         screen: RemoteImages,
-                     },
+                    },
+                    ApiConnections: {
+                        name: 'ApiConnections',
+                        description: 'Api Connections',
+                        screen: ApiConnections,
+                    },
                 },
                 {
                     initialRouteName: 'Welcome',

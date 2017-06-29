@@ -35,6 +35,11 @@ export default class Welcome extends React.Component {
                     style={Theme.styles.button}
                 >Remote Images</Button>
                 <Button
+                    onPress={() => navigate('ApiConnections')}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
+                >Api Connections</Button>
+                <Button
                     onPress={() => navigate('DrawerOpen')}
                     containerStyle={Theme.styles.buttonContainer}
                     style={Theme.styles.button}
