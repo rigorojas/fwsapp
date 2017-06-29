@@ -1,31 +1,9 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-import MapView from 'react-native-maps';
-import Api from "../../Components/OpenWeatherMap/Api";
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'stretch',
-        backgroundColor: '#F5FCFF',
-    },
-    map: {
-        flex: 2,
-        marginTop: 30,
-    },
-    textWrapper: {
-        flex: 1,
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 30,
-    }
-});
+import {StyleSheet, View, Image} from 'react-native';
 
 export default class Temperature extends Component {
     static navigationOptions = {
-      title: 'Remote Images',
+        title: 'Remote Images',
     };
 
     render(){
