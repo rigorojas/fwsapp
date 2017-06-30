@@ -5,6 +5,7 @@ import Theme from "../../Themes/default/styles/styles.js";
 
 export default class Welcome extends React.Component {
     static tintColor = "red";
+
     static navigationOptions = {
         title: 'Welcome',
         drawer: () => (
