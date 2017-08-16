@@ -50,6 +50,11 @@ export default class Welcome extends React.Component {
                     containerStyle={Theme.styles.buttonContainer}
                     style={Theme.styles.button}
                 >Alert</Button>
+                <Button
+                    onPress={() => navigate('MobX')}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
+                >MobX</Button>
             </Image>
         );
     }
