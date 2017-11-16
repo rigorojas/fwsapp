@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Image} from 'react-native';
-import {autorun, observable} from 'mobx';
+import {StyleSheet, View, Text} from 'react-native';
+import {ActivityIndicator} from 'react-native-button';
 
-export default class MobX extends Component {
-//    @observable todos = ["buy milk, buy eggs"];
-//    @observable filter = "";
+import CounterStore from './Store';
+import CounterUi from './CounterUi';
 
-    render(){
+export default class extends Component {
+
+    render() {
         return (
-            <View>
-                <Image
-                    style={{width: 300, height: 400}}
-                    source={{uri: 'http://www.techno4.us/custom/plugin/page/content/main/img/bg_bodyDesktop4.jpg'}}
-                />
-            </View>
+            <CounterUi store={CounterStore} />
         );
     }
+
 }
