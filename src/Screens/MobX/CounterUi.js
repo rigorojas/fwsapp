@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {PropTypes, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import {PropTypes, StyleSheet, Text, View } from 'react-native';
+import Button from 'react-native-button';
 import {observer} from 'mobx-react/native';
 
 const styles = StyleSheet.create({
@@ -31,19 +32,19 @@ export default observer( class extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.heading}>Mobx Counter</Text>
-                <TouchableHighlight onPress={() => this.props.store.increment()}>
+                <Button onPress={() => this.props.store.increment()}>
                     <Text style={styles.text}>|   +   | </Text>
-                </TouchableHighlight>
+                </Button>
 
                 <Text style={styles.text}>Clicked: {this.props.store.counter} times</Text>
 
-                <TouchableHighlight onPress={() => this.props.store.decrement()}>
+                <Button onPress={() => this.props.store.decrement()}>
                     <Text style={styles.text}>|   -   | </Text>
-                </TouchableHighlight>
+                </Button>
 
-                <TouchableHighlight onPress={() => this.props.store.incrementAsync()}>
+                <Button onPress={() => this.props.store.incrementAsync()}>
                     <Text style={styles.text}>|   + Async   | </Text>
-                </TouchableHighlight>
+                </Button>
             </View>
         );
     }
