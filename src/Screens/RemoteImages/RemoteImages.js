@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 
-export default class Temperature extends Component {
+export default class extends Component {
     static navigationOptions = {
-        title: 'Remote Images',
+        title: 'Remote Images'
     };
 
     render(){
@@ -15,7 +15,7 @@ export default class Temperature extends Component {
                 />
                 <Image
                     style={{width: 300, height: 300}}
-                    source={{uri: 'https://scontent.xx.fbcdn.net/v/t1.0-9/14433017_873234042807316_5561943368635280822_n.jpg?oh=4e97a4de5071670836bee24b168ffd9f&oe=5989450D'}}
+                    source={{uri: 'https://cdn.nba.net/nba-drupal-prod/styles/landscape_1045w/s3/2017-11/GettyImages-630741536.jpg'}}
                 />
                 <Image
                     style={{width: 300, height: 300}}
