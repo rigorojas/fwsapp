@@ -1,3 +1,4 @@
+//https://github.com/bartonhammond/mobx-react-native-counter
 import React, {Component} from 'react';
 import {PropTypes, StyleSheet, Text, View } from 'react-native';
 import Button from 'react-native-button';
