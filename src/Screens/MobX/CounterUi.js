@@ -34,17 +34,17 @@ export default observer( class extends Component {
             <View style={styles.container}>
                 <Text style={styles.heading}>Mobx Counter</Text>
                 <Button onPress={() => this.props.store.increment()}>
-                    <Text style={styles.text}>|   +   | </Text>
+                    <Text style={styles.text}>+</Text>
                 </Button>
 
                 <Text style={styles.text}>Clicked: {this.props.store.counter} times</Text>
 
                 <Button onPress={() => this.props.store.decrement()}>
-                    <Text style={styles.text}>|   -   | </Text>
+                    <Text style={styles.text}>-</Text>
                 </Button>
 
                 <Button onPress={() => this.props.store.incrementAsync()}>
-                    <Text style={styles.text}>|   + Async   | </Text>
+                    <Text style={styles.text}>|   + Async   |</Text>
                 </Button>
             </View>
         );
