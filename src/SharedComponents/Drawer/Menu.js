@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, Image} from 'react-native';
+import {ScrollView, StyleSheet, Text, ImageBackground} from 'react-native';
 import { NavigationActions } from 'react-navigation'
 import Button from 'react-native-button';
 import Theme from '../../Themes/default/styles/styles.js'
@@ -27,7 +27,7 @@ export default class Menu extends React.Component {
             ),
         }
         return (
-            <Image
+            <ImageBackground
                 source={Theme.backgrounds.main}
                 style={Theme.styles.sceneContainer}
             >
@@ -53,7 +53,7 @@ export default class Menu extends React.Component {
                         style={Theme.styles.button}
                     >Close Drawer</Button>
                 </ScrollView>
-            </Image>
+            </ImageBackground>
         );
     }
 }

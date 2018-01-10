@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         width: null,
         height: null,
-        resizeMode: "stretch"
     },
     buttonContainer: {
         padding: 10,

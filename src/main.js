@@ -65,6 +65,9 @@ const Main = DrawerNavigator(
     {
         contentComponent: DrawerMenuScreen,
         drawerWidth: 300,
+        drawerOpenRoute: 'DrawerOpen',
+        drawerCloseRoute: 'DrawerClose',
+        drawerToggleRoute: 'DrawerToggle',
         style: {},
     }
 );

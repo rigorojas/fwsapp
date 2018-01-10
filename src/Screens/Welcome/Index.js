@@ -1,5 +1,5 @@
 import React from 'React';
-import {Image} from 'react-native';
+import {ImageBackground} from 'react-native';
 import Button from 'react-native-button';
 import Theme from "../../Themes/default/styles/styles.js";
 
@@ -21,7 +21,7 @@ export default class Welcome extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
         return (
-            <Image
+            <ImageBackground
                 source={Theme.backgrounds.main}
                 style={Theme.styles.sceneContainer}
             >
@@ -60,7 +60,7 @@ export default class Welcome extends React.Component {
                     containerStyle={Theme.styles.buttonContainer}
                     style={Theme.styles.button}
                 >Redux</Button>
-            </Image>
+            </ImageBackground>
         );
     }
 }

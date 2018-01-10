@@ -1,5 +1,5 @@
 import React from 'React';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, ImageBackground} from 'react-native';
 import OpenWeatherMapApi from "../../Components/OpenWeatherMap/Api.js";
 import MapView from 'react-native-maps';
 import Theme from "../../Themes/default/styles/styles.js";
@@ -56,7 +56,7 @@ export default class ApiConnections extends React.Component {
 
     render() {
         return(
-            <Image
+            <ImageBackground
                 source={Theme.backgrounds.main}
                 style={Theme.styles.sceneContainer}
             >
@@ -65,7 +65,7 @@ export default class ApiConnections extends React.Component {
                     <Text style={styles.text}>{this.state.temperature}</Text>
                     <Text style={styles.text} >{this.state.description}</Text>
                 </View>
-            </Image>
+            </ImageBackground>
         );
     }
 }
