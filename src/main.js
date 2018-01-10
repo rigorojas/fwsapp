@@ -5,6 +5,7 @@ import User from "./Screens/User/Index.js";
 import Welcome from "./Screens/Welcome/Index.js";
 import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
 import MobX from "./Screens/MobX/MobX.js";
+import Redux from "./Screens/Redux/Redux.js";
 import ApiConnections from "./Screens/ApiConnections/Index.js";
 
 class DrawerMenuScreen extends React.Component {
@@ -37,6 +38,11 @@ const Main = DrawerNavigator(
                         name: 'MobX',
                         description: 'Mob X',
                         screen: MobX,
+                    },
+                    Redux: {
+                        name: 'Redux',
+                        description: 'Redux',
+                        screen: Redux,
                     },
                     RemoteImages: {
                         name: 'RemoteImages',
