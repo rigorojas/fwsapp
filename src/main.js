@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {Provider} from 'react-redux';
+import {connect} from 'react-redux';
+import store from './Store/Store.js';
 import {StackNavigator, DrawerNavigator} from "react-navigation";
 import Menu from './SharedComponents/Drawer/Menu.js';
 import User from "./Screens/User/Index.js";
@@ -72,4 +75,12 @@ const Main = DrawerNavigator(
     }
 );
 
-export default Main;
+export default class ReduxWrapper extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+          <Main />
+      </Provider>
+    );
+  }
+}

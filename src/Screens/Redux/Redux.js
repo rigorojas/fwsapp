@@ -1,14 +1,20 @@
+//http://rants.broonix.ca/getting-started-with-react-native-and-redux/
 import React, { Component } from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
+import Counter from './Counter.js';
 
-export default class extends Component {
+const mapStateToProps = state => ({
+  count: state
+})
 
-    render() {
-        return (
-            <View>
-                <Text>Redux goes here!</Text>
-            </View>
-        );
-    }
+const mapDispatchToProps = (dispatch) => ({
+  increment: () => { dispatch({ type: 'INCREMENT' }) },
+  decrement: () => { dispatch({ type: 'DECREMENT' }) },
+  reset: () => { dispatch({ type: 'RESET' }) },
+})
 
-}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Counter);
