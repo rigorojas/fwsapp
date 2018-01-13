@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,7 +7,7 @@ import {
 import Button from 'react-native-button';
 import Theme from '../../Themes/default/styles/styles.js'
 
-export default class Counter extends Component {
+export default class extends Component {
   render() {
     return (
       <View>
@@ -19,7 +19,7 @@ export default class Counter extends Component {
         <Text
           style={styles.counter}
           onPress={this.props.reset}>
-          {this.props.count}
+          {this.props.countInt}
         </Text>
         <Button
           onPress={this.props.decrement}
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
   counter: {
     padding: 30,
     alignSelf: 'center',
-    fontSize: 26,
-    fontWeight: 'bold',
+    fontSize: 60,
   },
 });

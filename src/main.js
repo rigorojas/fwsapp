@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux';
-import {connect} from 'react-redux';
 import store from './Store/Store.js';
 import {StackNavigator, DrawerNavigator} from "react-navigation";
 import Menu from './SharedComponents/Drawer/Menu.js';
@@ -8,7 +7,7 @@ import User from "./Screens/User/Index.js";
 import Welcome from "./Screens/Welcome/Index.js";
 import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
 import MobX from "./Screens/MobX/MobX.js";
-import Redux from "./Screens/Redux/Redux.js";
+import Counter from "./Screens/Counter/Counter.js";
 import ApiConnections from "./Screens/ApiConnections/Index.js";
 
 class DrawerMenuScreen extends React.Component {
@@ -42,10 +41,10 @@ const Main = DrawerNavigator(
                         description: 'Mob X',
                         screen: MobX,
                     },
-                    Redux: {
-                        name: 'Redux',
-                        description: 'Redux',
-                        screen: Redux,
+                    Counter: {
+                        name: 'Counter',
+                        description: 'Counter',
+                        screen: Counter,
                     },
                     RemoteImages: {
                         name: 'RemoteImages',
