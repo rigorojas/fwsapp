@@ -4,10 +4,10 @@ import {
 } from 'redux';
 import counterReducer from '../Screens/Counter/Reducer.js';
 
+
 // const reducers = combineReducers({
-//     counter: counterReducer,
+//     counterReducer,
+//     dummyReducer,
 // });
 
-const store = createStore(counterReducer);
-
-export default store;
+export default createStore(counterReducer);

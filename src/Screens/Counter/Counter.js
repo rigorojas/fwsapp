@@ -6,27 +6,27 @@ import Layout from './Layout.js';
 
 const mapStateToProps = (state) => ({
     countInt: state
-})
+});
 
 const mapDispatchToProps = (dispatch) => ({
     increment: () => {
         dispatch({
             type: "INCREMENT",
-            payload: 1
+            payload: 1,
         })
     },
     decrement: () => {
         dispatch({
             type: "DECREMENT",
-            payload: 1
+            payload: 1,
         })
     },
     reset: () => {
         dispatch({
-            type: "RESET"
+            type: "RESET",
         })
     },
-})
+});
 
 export default connect(
     mapStateToProps,
