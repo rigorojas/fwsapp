@@ -1,34 +1,37 @@
-// //http://rants.broonix.ca/getting-started-with-react-native-and-redux/
-import {Component} from 'react';
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux';
-import Layout from './Layout.js';
+import React, {Component} from 'react';
+import {
+    Text,
+    View,
+} from 'react-native';
+import Button from 'react-native-button';
+import Theme from '../../Themes/default/styles/styles.js'
+import Styles from './Styles.js'
 
-const mapStateToProps = (state) => ({
-    countInt: state
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    increment: () => {
-        dispatch({
-            type: "INCREMENT",
-            payload: 1,
-        })
-    },
-    decrement: () => {
-        dispatch({
-            type: "DECREMENT",
-            payload: 1,
-        })
-    },
-    reset: () => {
-        dispatch({
-            type: "RESET",
-        })
-    },
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Layout);
+export default class Counter extends Component {
+    render() {
+        return (
+            <View>
+                <Button
+                    onPress={this.props.increment}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
+                >
+                    Up
+                </Button>
+                <Text
+                    style={Styles.counter}
+                    onPress={this.props.reset}
+                >
+                    {this.props.countInt}
+                </Text>
+                <Button
+                    onPress={this.props.decrement}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
+                >
+                    Down
+                </Button>
+            </View>
+        );
+    }
+}

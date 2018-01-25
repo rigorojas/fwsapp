@@ -7,7 +7,7 @@ import User from "./Screens/User/Index.js";
 import Welcome from "./Screens/Welcome/Index.js";
 import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
 import MobX from "./Screens/MobX/MobX.js";
-import Counter from "./Screens/Counter/Counter.js";
+import Counter from "./Screens/Counter";
 import ApiConnections from "./Screens/ApiConnections/Index.js";
 
 class DrawerMenuScreen extends React.Component {
