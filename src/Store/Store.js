@@ -3,11 +3,11 @@ import {
     combineReducers,
     createStore
 } from 'redux';
-import {createLogger} from 'redux-logger';
+//import {createLogger} from 'redux-logger';
 import counterReducer from '../Screens/Counter/Reducer.js';
 
-const logger = createLogger();
-const initialState = {};
+//const logger = createLogger();
+//const initialState = {};
 
 // const reducers = combineReducers({
 //     counterReducer

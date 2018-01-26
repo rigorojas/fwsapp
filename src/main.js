@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux';
-import store from './Store/Store.js';
+import Store from './Store/Store.js';
 import {StackNavigator, DrawerNavigator} from "react-navigation";
 import Menu from './SharedComponents/Drawer/Menu.js';
 import User from "./Screens/User/Index.js";
 import Welcome from "./Screens/Welcome/Index.js";
 import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
 import MobX from "./Screens/MobX/MobX.js";
-import Counter from "./Screens/Counter";
+import Counter from "./Screens/Counter/Index.js";
 import ApiConnections from "./Screens/ApiConnections/Index.js";
 
 class DrawerMenuScreen extends React.Component {
@@ -77,7 +77,7 @@ const Main = DrawerNavigator(
 export default class ReduxWrapper extends Component {
   render() {
     return (
-      <Provider store={store}>
+      <Provider store={Store}>
           <Main />
       </Provider>
     );
