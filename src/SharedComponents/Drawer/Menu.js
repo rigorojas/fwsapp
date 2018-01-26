@@ -52,6 +52,15 @@ export default class Menu extends React.Component {
                         containerStyle={Theme.styles.buttonContainer}
                         style={Theme.styles.button}
                     >Close Drawer</Button>
+
+                    <Button
+                        onPress={this.props.reset}
+                        label="Close Drawer"
+                        containerStyle={Theme.styles.buttonContainer}
+                        style={Theme.styles.button}
+                    >
+                        {this.props.countInt}
+                    </Button>
                 </ScrollView>
             </ImageBackground>
         );
