@@ -8,7 +8,9 @@ const mapStateToProps = (state) => ({
     countInt: state
 });
 
+const mapDispatchToProps = Actions;
+
 export default connect(
     mapStateToProps,
-    Actions
+    mapDispatchToProps
 )(Counter);
