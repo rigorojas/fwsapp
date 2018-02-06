@@ -9,6 +9,7 @@ import RemoteImages from "./Screens/RemoteImages/RemoteImages.js";
 import MobX from "./Screens/MobX/MobX.js";
 import Counter from "./Screens/Counter/Index.js";
 import ApiConnections from "./Screens/ApiConnections/Index.js";
+import TheWeb from "./Screens/TheWeb/Index.js";
 
 class DrawerMenuScreen extends React.Component {
     render(){
@@ -55,6 +56,11 @@ const Main = DrawerNavigator(
                         name: 'ApiConnections',
                         description: 'Api Connections',
                         screen: ApiConnections,
+                    },
+                    TheWeb: {
+                        name: 'The Web',
+                        description: 'The Web',
+                        screen: TheWeb,
                     },
                 },
                 {

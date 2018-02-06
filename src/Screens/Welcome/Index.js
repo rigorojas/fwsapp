@@ -60,6 +60,11 @@ export default class Welcome extends React.Component {
                     containerStyle={Theme.styles.buttonContainer}
                     style={Theme.styles.button}
                 >Redux Counter</Button>
+                <Button
+                    onPress={() => navigate('TheWeb')}
+                    containerStyle={Theme.styles.buttonContainer}
+                    style={Theme.styles.button}
+                >The Web</Button>
             </ImageBackground>
         );
     }
