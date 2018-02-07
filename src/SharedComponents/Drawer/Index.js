@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = (state) => ({
-    countInt: state
+    Counter: state
 });
 
 export default connect(

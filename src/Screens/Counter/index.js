@@ -5,7 +5,7 @@ import Actions from './Actions.js';
 import Counter from './Counter.js';
 
 const mapStateToProps = (state) => ({
-    countInt: state
+    Counter: state
 });
 
 const mapDispatchToProps = Actions;

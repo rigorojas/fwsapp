@@ -59,7 +59,7 @@ export default class Menu extends React.Component {
                         containerStyle={Theme.styles.buttonContainer}
                         style={Theme.styles.button}
                     >
-                        {this.props.countInt}
+                        {this.props.Counter}
                     </Button>
                 </ScrollView>
             </ImageBackground>

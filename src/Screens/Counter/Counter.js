@@ -22,7 +22,7 @@ export default class Counter extends Component {
                     style={Styles.counter}
                     onPress={this.props.reset}
                 >
-                    {this.props.countInt}
+                    {this.props.Counter}
                 </Text>
                 <Button
                     onPress={this.props.decrement}
