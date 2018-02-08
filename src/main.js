@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Provider} from 'react-redux';
-import Store from './Store/Store.js';
+import Store from './Store/Index.js';
 import {StackNavigator, DrawerNavigator} from "react-navigation";
 import Menu from './SharedComponents/Drawer/Index.js';
 import User from "./Screens/User/Index.js";
