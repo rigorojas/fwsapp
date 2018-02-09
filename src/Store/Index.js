@@ -4,15 +4,15 @@ import {
     createStore
 } from 'redux';
 //import {createLogger} from 'redux-logger';
-import counterReducer from '../Screens/Counter/Reducer.js';
+import CounterReducer from '../Screens/Counter/Reducer.js';
 
 //const logger = createLogger();
 //const initialState = {};
 
-const RootReducer = counterReducer;
+const RootReducer = CounterReducer;
 
 // const RootReducer = combineReducers({
-//     counterReducer
+//     CounterReducer
 // });
 
 // export default createStore(
