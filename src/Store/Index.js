@@ -9,13 +9,15 @@ import counterReducer from '../Screens/Counter/Reducer.js';
 //const logger = createLogger();
 //const initialState = {};
 
-// const reducers = combineReducers({
+const RootReducer = counterReducer;
+
+// const RootReducer = combineReducers({
 //     counterReducer
 // });
 
 // export default createStore(
-//     counterReducer,
+//     RootReducer,
 //     initialState,
 //     applyMiddleware(logger)
 // );
-export default createStore(counterReducer);
+export default createStore(RootReducer);
