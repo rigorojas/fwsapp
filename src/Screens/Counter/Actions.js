@@ -1,4 +1,4 @@
-export default Actions = (dispatch) => (
+export default (dispatch) => (
     {
         increment: () => {
             dispatch({
