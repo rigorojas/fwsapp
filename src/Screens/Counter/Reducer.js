@@ -1,7 +1,4 @@
-export default Reducer = (state = 0, action) => {
-    if (typeof state === 'undefined') {
-      state = 0;
-    }
+export default (state = 0, action) => {
     switch (action.type) {
         case 'INCREMENT':
             return state + action.payload;
